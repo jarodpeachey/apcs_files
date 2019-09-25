@@ -1,0 +1,12 @@
+TITLE: 3.07 Grades Project
+FILENAME: Grades_307.java
+VERSION: 1.0.0
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * I enjoyed taking on this project. At first, I was only going to make this compatible with one test entry, but I decided to make it work with more than one test.
+
+    * It was pretty tough to get the types of all the data to work. It took some testing to figure out whether to use a Test[], Array[] or an Object[]. I eventually figured it out though!
+
+___ end PMR ________________________________________________________
