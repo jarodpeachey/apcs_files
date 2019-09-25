@@ -1,0 +1,14 @@
+TITLE: 2.08 Challenge Project
+FILENAME: Currency.java
+VERSION: 1.0.0 - 9/18/19
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * I enjoyed taking on this challenge project. It got repetitive for me to have to rewrite each print statement for each country, so I decided to create a new Class for each country, and loop through the array of countries. This cleaned up the code and made it easier to read.
+
+    * I found it slightly confusing to create multiple files and use them, as it's unique to any other language I've programmed in. The other languages I've used declare each class in the same file, so using different files was a unique experience.
+
+___ end PMR ________________________________________________________
+
+In the future, I'll probably try to clean up the code even more.

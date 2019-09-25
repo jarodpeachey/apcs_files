@@ -1,0 +1,14 @@
+TITLE: 2.07 Grades Project
+FILENAME: Grades_207.java
+VERSION: 1.0.0 - 9/16/19
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * It was interesting to see how simply using a for-each loop made the code much cleaner, and reduced the number of lines as well.
+
+    * I found it hard to remember exactly which iteration I was on without the for-each loop
+
+___ end PMR ________________________________________________________
+
+In the future, I'll try to continue using a for-each loop to simplify my code and make it more readable.

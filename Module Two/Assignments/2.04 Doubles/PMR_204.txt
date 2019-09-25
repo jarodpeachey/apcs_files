@@ -1,0 +1,13 @@
+TITLE: 2.04 Doubles Project
+FILENAME: Calculations204.java
+VERSION: 1.0.0 - 9/10/19
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * Using print() statements to do arithmetic is both easy and hard at the same time.
+      It's easy to declare the variables and add or subtract them, along with other operations, but it's tough to read the print statements and avoid syntax errors.
+
+___ end PMR ________________________________________________________
+
+In the future, I'll try to make the print statements more readable, if possible.
