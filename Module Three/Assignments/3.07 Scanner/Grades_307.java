@@ -24,19 +24,9 @@ public class Grades_307 {
     System.out.println("Welcome to TestKeeper 3000!! To get started and add a test, press enter.");
     String readString = in.nextLine();
 
-    while(readString != null) {
-      System.out.println(readString);
-
-      if (readString.isEmpty()) {
-        // Call add new test function
-        addNewTest();        
-      }
-
-      if (in.hasNextLine()) {
-        readString = in.nextLine();
-      } else {
-        readString = null;
-      }
+    if (readString.isEmpty()) {
+      // Call add new test function
+      addNewTest();        
     }
   }
 
