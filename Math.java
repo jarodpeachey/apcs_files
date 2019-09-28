@@ -1,4 +1,3 @@
-
 /**
  * The purpose of this program is to do math
  * 
@@ -6,9 +5,14 @@
  * @version 9/12/19
  */
 
+import java.util.Scanner;
+
 public class Math {
   public static void main(String[] args) {
-    int iNum = 6.23;
-    System.out.println(iNum);
+    Scanner in = new Scanner(System.in);
+
+    String firstInitial = firstName.subString(0,3);
+    String lastName = in.nextLine();
+    String name = firstInitial + ". " + capsLastName;
   }// end of main method
 }// end of class
