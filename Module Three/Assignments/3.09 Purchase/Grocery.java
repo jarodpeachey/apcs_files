@@ -61,11 +61,14 @@ public class Grocery {
     System.out.println();
 
     for (int j=0; j < itemsAvailable.length; j++) {
-      if (itemsAvailable[j].name.toLowerCase() == item.toLowerCase()) {
+      // System.out.println(itemsAvailable[j].name.toString().toLowerCase());
+      // System.out.println(item.toLowerCase());
+
+      if (itemsAvailable[j].name.trim().toLowerCase().matches("(.*)" + item + "(.*)")) {
         itemInStore = true;
 
         itemCost = itemsAvailable[j].cost;
-        itemId = itemsAvailable[j].id;
+        itemId = itemsAvailable[j].id;        
       }
     }
 
