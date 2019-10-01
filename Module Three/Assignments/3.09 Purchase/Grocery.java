@@ -142,8 +142,11 @@ public class Grocery {
       System.out.println("Order #: " + orderNum);
       System.out.println("");
 
-      System.out.println("   Name: " + displayName);
-      System.out.println("   Card #: " + formattedCardNumber);
+      System.out.println("Name: " + displayName);
+      System.out.println("Card #: " + formattedCardNumber);
+      System.out.println("");
+      System.out.println("Items:");
+      System.out.println("");
       // Loop through each item
       for (int j = 0; j < itemsInUsersCart.length; j++) {
         DecimalFormat df = new DecimalFormat("#.00");
@@ -153,10 +156,12 @@ public class Grocery {
         String cost = df.format(quantity * itemsInUsersCart[j].cost);
         totalCost += itemsInUsersCart[j].cost * itemsInUsersCart[j].quantity;
 
-        System.out.println("Item: " + name);
-        System.out.println("Cost per Item: $" + cost);
-        System.out.println("Total Items Bought: " + quantity);
-        System.out.println("Total Cost: $" + totalCost);
+        System.out.println("  Item: " + name);
+        System.out.println("  Cost per Item: ---------------------- $" + costPerItem);
+        // System.out.println("                                         x");
+        System.out.println("  Total Items Bought: ----------------- " + quantity);
+        System.out.println("  Total: ------------------------------ $" + cost);
+        System.out.println("");
       }
 
       System.out.print("The total cost is $" + totalCost);
