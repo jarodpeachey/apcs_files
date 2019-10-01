@@ -1,0 +1,12 @@
+TITLE: 3.09 Challenge Project
+FILENAME: Grocery_309.java
+VERSION: 1.0.0
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * This was a fun project, because I got to work with new things in Java, like decimal formatting and dates.
+
+    * It was a challenge to get the output to look right, but I eventually settled on what I have now.
+
+___ end PMR ________________________________________________________

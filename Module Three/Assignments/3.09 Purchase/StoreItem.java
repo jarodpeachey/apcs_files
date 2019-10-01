@@ -1,9 +1,9 @@
-public class Store {
+public class StoreItem {
   public String name;
   public double cost;
   public int id;
 
-  public Store(String newName, double newCost, int newId) {
+  public StoreItem(String newName, double newCost, int newId) {
     // Set Student variables
     name = newName;
     cost = newCost;
