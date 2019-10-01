@@ -10,36 +10,39 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+
 public class Grocery {
   // Set variables
   static Boolean addItemBool = false;
   static int numberOfItems = 0;
-  static GroceryItem[] itemsAvailable = new GroceryItem[10];
-  static GroceryItem[] itemsInUsersCart = new GroceryItem[1];
+  static String firstName = "";
+  static String lastName = "";
+  static Store[] itemsAvailable = new Store[10];
+  static GroceryItem[] itemsInUsersCart = new GroceryItem[0];
 
   // Start scanner
   static Scanner in = new Scanner(System.in);
 
   public static void main(String[] args) {
-    itemsAvailable[0] = new GroceryItem("Cookies", 3.50, 1);
-    itemsAvailable[1] = new GroceryItem("Milk", 2.75, 2);
-    itemsAvailable[2] = new GroceryItem("Butter", 1.89, 3);
-    itemsAvailable[3] = new GroceryItem("Sugar", 2.25, 4);
-    itemsAvailable[4] = new GroceryItem("Eggs", 3.25, 5);
-    itemsAvailable[5] = new GroceryItem("Apples", 1.50, 6);
-    itemsAvailable[6] = new GroceryItem("Soda", 2.15, 7);
-    itemsAvailable[7] = new GroceryItem("Ice Cream", 2.69, 8);
-    itemsAvailable[8] = new GroceryItem("Chips", 3.15, 9);
-    itemsAvailable[9] = new GroceryItem("Snacks", 1.79, 10);
+    itemsAvailable[0] = new Store("Cookies", 3.50, 1);
+    itemsAvailable[1] = new Store("Milk", 2.75, 2);
+    itemsAvailable[2] = new Store("Butter", 1.89, 3);
+    itemsAvailable[3] = new Store("Sugar", 2.25, 4);
+    itemsAvailable[4] = new Store("Eggs", 3.25, 5);
+    itemsAvailable[5] = new Store("Apples", 1.50, 6);
+    itemsAvailable[6] = new Store("Soda", 2.15, 7);
+    itemsAvailable[7] = new Store("Ice Cream", 2.69, 8);
+    itemsAvailable[8] = new Store("Chips", 3.15, 9);
+    itemsAvailable[9] = new Store("Snacks", 1.79, 10);
 
     System.out.println();
-    System.out.println("Welcome to GroceryMart. Press enter to begin shopping.");
-    String readString = in.nextLine();
+    System.out.println("Welcome to GroceryMart. What is your first and last name?");
+    firstName = in.next();
+    lastName = in.nextLine();
 
-    if (readString.isEmpty()) {
-      // Call add new item function
-      addNewItem();       
-    }
+    addNewItem();
   }
 
   public static void addNewItem() {
@@ -58,17 +61,20 @@ public class Grocery {
       }
     }
     String item = in.next();
+    item += in.nextLine();
     System.out.println();
 
     for (int j=0; j < itemsAvailable.length; j++) {
       // System.out.println(itemsAvailable[j].name.toString().toLowerCase());
       // System.out.println(item.toLowerCase());
 
-      if (itemsAvailable[j].name.trim().toLowerCase().matches("(.*)" + item + "(.*)")) {
+      if (itemsAvailable[j].name.trim().toLowerCase().matches("(.*)" + item.trim().toLowerCase() + "(.*)")) {
         itemInStore = true;
 
         itemCost = itemsAvailable[j].cost;
-        itemId = itemsAvailable[j].id;        
+        itemId = itemsAvailable[j].id;
+
+        System.out.println(item.trim().toLowerCase());
       }
     }
 
@@ -78,7 +84,7 @@ public class Grocery {
       int numberOfItem = in.nextInt();
       System.out.println();
 
-      GroceryItem newItem = new GroceryItem(item, itemCost, itemId);
+      GroceryItem newItem = new GroceryItem(item, itemCost, itemId, numberOfItem);
 
       // Since Java arrays have fixed length, we create an ArrayList
       ArrayList<GroceryItem> temp = new ArrayList<GroceryItem>();
@@ -110,7 +116,6 @@ public class Grocery {
     } else {
       System.out.print("No item");
     }
-
   }
 
   public static void checkItemBool() {
@@ -118,43 +123,43 @@ public class Grocery {
       // Add a new item
       addNewItem();
     } else {
-    System.out.print("Complete!!");
-    //   // Print the results!!
-    //   int totalStudentsThroughAllItems = 0;
-    //   double totalAverageThroughAllItems = 0.0;
+      System.out.println("Welcome to checkout. Please enter your debit card number (#####-###-####): ");
+      String debitNumber = in.next();
 
-    //   // Loop through each item
-    //   for (int j = 0; j < itemsArray.length; j++) {
-    //     numItems++; // Increment the number of items
+      System.out.println("Enter your PIN (####): ");
+      String pinNumber = in.next();
 
-    //     // Print item data
-    //     System.out.println();
-    //     System.out.println("Item #" + numItems);
-    //     System.out.println("  - Subject: " + itemsArray[j].subject);
-    //     System.out.println("  - Total Students: " + itemsArray[j].totalStudents);
-    //     System.out.println("  - Item scores:");
+      String orderNum = pinNumber.substring(0, 3) + firstName.substring(0, 1) + lastName.substring(0, 1) + pinNumber.substring(1, 3);
+      LocalDate date = LocalDate.now();
+      String displayName = firstName.substring(0, 1) + "." + lastName;
+      double totalCost = 0.0;
+      String formattedCardNumber = debitNumber.replaceAll("[^-](?![^-]*$)", "#");
 
-    //     // Loop through the students that took the item and print data
-    //     for (int k=0; k < itemsArray[j].studentsArray.length; k++) {
-    //       totalStudentsThroughAllItems++;
-    //       System.out.println("      Student #" + itemsArray[j].studentsArray[k].id);
-    //       System.out.println("        - Name: " + itemsArray[j].studentsArray[k].name);
-    //       System.out.println("        - Score: " + itemsArray[j].studentsArray[k].grade);
-    //     }
+      System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+      System.out.println("");
+      System.out.println("GroceryMart Receipt");
+      System.out.println(date);
+      System.out.println("Order #: " + orderNum);
+      System.out.println("");
 
-    //     // Calculate the average score for this item
-    //     System.out.println("  - Average score: " + itemsArray[j].average);
-    //     System.out.println();
+      System.out.println("   Name: " + displayName);
+      System.out.println("   Card #: " + formattedCardNumber);
+      // Loop through each item
+      for (int j = 0; j < itemsInUsersCart.length; j++) {
+        DecimalFormat df = new DecimalFormat("#.00");
+        String name = itemsInUsersCart[j].name;
+        String costPerItem = df.format(itemsInUsersCart[j].cost);
+        int quantity = itemsInUsersCart[j].quantity;
+        String cost = df.format(quantity * itemsInUsersCart[j].cost);
+        totalCost += itemsInUsersCart[j].cost * itemsInUsersCart[j].quantity;
 
-    //     // Add average score for the item to the total average score
-    //     totalAverageThroughAllItems += itemsArray[j].average;
-    //   }
+        System.out.println("Item: " + name);
+        System.out.println("Cost per Item: $" + cost);
+        System.out.println("Total Items Bought: " + quantity);
+        System.out.println("Total Cost: $" + totalCost);
+      }
 
-    //   // Calculate the average through all the items
-    //   double averageFromAllItems = totalAverageThroughAllItems / numItems;
-
-    //   // After finished looping through items, calculate the average score item-wide
-    //   System.out.println("The average score for all " + numItems + " items (from " + totalStudentsThroughAllItems + " students) is " + averageFromAllItems);
+      System.out.print("The total cost is $" + totalCost);
     }
   }
 } // end of class
