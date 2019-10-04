@@ -9,10 +9,7 @@ import java.util.Scanner;
 
 public class Math {
   public static void main(String[] args) {
-    Scanner in = new Scanner(System.in);
-
-    String firstInitial = firstName.subString(0,3);
-    String lastName = in.nextLine();
-    String name = firstInitial + ". " + capsLastName;
+    double x = 45.0 / 100;
+    System.out.println(x);
   }// end of main method
 }// end of class
