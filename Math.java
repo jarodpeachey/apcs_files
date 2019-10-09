@@ -9,7 +9,11 @@ import java.util.Scanner;
 
 public class Math {
   public static void main(String[] args) {
-    double x = 45.0 / 100;
-    System.out.println(x);
+    int num = 12;
+    num -= 7;
+    String str = "United States";
+    String str1 = "FloridaState";
+    String str2 = "Seminoles";
+    System.out.print((88 + 92 + 83) / 3);
   }// end of main method
 }// end of class
