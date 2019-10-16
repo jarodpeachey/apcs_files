@@ -9,11 +9,17 @@ import java.util.Scanner;
 
 public class Math {
   public static void main(String[] args) {
-    int num = 12;
-    num -= 7;
-    String str = "United States";
-    String str1 = "FloridaState";
-    String str2 = "Seminoles";
-    System.out.print((88 + 92 + 83) / 3);
+    int num = 20;
+    System.out.println(6 / 8);
+    System.out.println(6 / 8 == 0.0);
+    System.out.println(6 / 8.0);
+    System.out.println(6 / 8.0 == 0.0);
+    System.out.println((int)(6.0 / 8.0));
+    System.out.println((int)(6.0 / 8.0) == 0.0);
   }// end of main method
 }// end of class
+
+/*
+javac Math.java
+java Math
+*/
