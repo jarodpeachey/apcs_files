@@ -1,0 +1,10 @@
+TITLE: 4.05 BMI Calculator
+FILENAME: BMI.java
+VERSION: 1.0.0
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * This project was fun to complete, as I enjoy using if, if-else and if-else-if statements in code. It was neat to put what I've previously learned in a project with something new.
+
+___ end PMR ________________________________________________________

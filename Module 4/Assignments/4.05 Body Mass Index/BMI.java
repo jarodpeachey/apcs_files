@@ -3,7 +3,7 @@
  * The purpose of this program is to calculate the BMI of the user
  * 
  * @author Jarod Peachey
- * @version 9/12/19
+ * @version 10/22/19
  */
 
 import java.util.Scanner;
