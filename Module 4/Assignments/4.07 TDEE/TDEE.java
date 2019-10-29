@@ -15,6 +15,9 @@ public class TDEE {
   static double userBMR = 0.0;
   static double userTDEE = 0.0;
   static double userActivityFactor = 0.0;
+  static String userName = "";
+  static int userAge = 0;
+  static String userGender = "";
 
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
@@ -23,9 +26,16 @@ public class TDEE {
     String fullName = in.next();
     fullName += in.nextLine();
     System.out.println("");
+    userName = fullName;
 
-    System.out.print("What is your gender (m/f)");
+    System.out.print("What is your gender? (M/F) ");
+    while (!in.hasNext("[mfMF]")) {
+      System.out.print("Try again. Please enter your gender:  ");
+      in.next();
+    }
     String gender = in.next();
+    userGender = gender;
+    System.out.println();
 
     System.out.print("What is your height? (FEET INCHES)  ");
     String feet = in.next();
@@ -39,8 +49,9 @@ public class TDEE {
     System.out.print("What is your age?  ");
     int age = in.nextInt();
     System.out.println("");
+    userAge = age;
 
-    System.out.println("Select your activity level");
+    System.out.println("Select your activity level:");
     System.out.println("[A] Resting (Sleeping, Reclining)");
     System.out.println("[B] Sedentary (Minimal Movement");
     System.out.println("[C] Light (Sitting, Standing)");
@@ -49,40 +60,35 @@ public class TDEE {
     System.out.println("[F] Extremely Active (Full-Time Athlete, Heavy Manual Labor)");
     System.out.println();
 
-    TDEE demo = new TDEE();
-    String activityLevel = demo.validateCharacter();
-
-    if (in.next().toLowerCase() == "a" || in.next().toLowerCase() == "b" || in.next().toLowerCase() == "c"
-        || in.next().toLowerCase() == "d" || in.next().toLowerCase() == "e" || in.next().toLowerCase() == "f") {
-      activityLevel = in.next();
+    System.out.print("Enter the letter corresponding to your activity level:  ");
+    while (!in.hasNext("[abcdef]")) {
+      System.out.print("Try again. Please enter the letter corresponding to your activity level:  ");
+      in.next();
     }
+    String activityLevel = in.next();
 
     calculateActivityFactor(gender, activityLevel);
-
     calculateBMR(gender, feet, inches, weight, age);
+    calculateTDEE(userBMR, userActivityFactor);
+    DecimalFormat df = new DecimalFormat("#.00");
 
-    DecimalFormat formatDecimal = new DecimalFormat("#.00");
+    String format = "%1$-30s%2$-2s\n";
 
-    String finalBMR = formatDecimal.format(userBMR);
-
-    System.out.println("BMR: " + finalBMR);
-    System.out.println("Activity Factor: " + userActivityFactor);
+    System.out.println();
+    System.out.println("Your test is complete!! Here are your results:");
+    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    System.out.println("");
+    // System.out.format("%1$2s %2$30s", "Name: " + userName.trim(), "Gender: " + userGender.trim());
+    // System.out.println();
+    // System.out.format("%1$2s %2$30s", "BMR: " + df.format(userBMR), "ActivityFactor: " + userActivityFactor);
+    String userNameString = "Name: " + userName;
+    String userGenderString = "Gender: " + userGender;
+    String userBMRString = "BMR: " + df.format(userBMR);
+    String userActivityFactorString = "BMR: " + userActivityFactor;
+    System.out.format(format, userNameString, userGenderString);
+    System.out.format(format, userBMRString, userActivityFactorString);
+    System.out.println("TDEE: " + df.format(userTDEE));
   }// end of main method
-
-  public String validateCharacter() {
-    Scanner in = new Scanner(System.in);
-
-    String activityLevel = "";
-
-    do {
-      System.out.print("Please enter the letter corresponding to your activity level:  ");
-      activityLevel = in.next();
-    } while (activityLevel.toLowerCase() != "a" && activityLevel.toLowerCase() != "b" && activityLevel.toLowerCase() != "c" && activityLevel.toLowerCase() != "d" && activityLevel.toLowerCase() != "e" && activityLevel.toLowerCase() != "f");
-
-    System.out.print("SUCCESS");
-
-    return activityLevel;
-  }
 
   static void calculateBMR(String gender, String feet, String inches, int weight, int age) {
     double totalInches = Double.parseDouble(feet) / 12 + (Double.parseDouble(inches));
@@ -122,6 +128,8 @@ public class TDEE {
         calculatedActivityFactor = 2.2;
         break;
       }
+
+      userGender = "Female";
     } else {
       switch (activityLevel.toLowerCase()) {
       case "a":
@@ -143,23 +151,15 @@ public class TDEE {
         calculatedActivityFactor = 2.4;
         break;
       }
+      userGender = "Male";
     }
 
     userActivityFactor = calculatedActivityFactor;
   }
 
-  static String getUserWeightStatus(double BMI) {
-    String weightStatus = "";
+  static void calculateTDEE(double BMR, double activityLevel) {
+    double TDEE = BMR * activityLevel;
 
-    if (BMI < 18.5)
-      weightStatus = "Underweight";
-    else if (BMI < 24.5)
-      weightStatus = "Normal";
-    else if (BMI < 30)
-      weightStatus = "Overweight";
-    else
-      weightStatus = "Obese";
-
-    return weightStatus;
+    userTDEE = TDEE;
   }
 }// end of class
