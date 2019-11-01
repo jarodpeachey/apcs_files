@@ -1,0 +1,12 @@
+TITLE: 4.07 TDEE Calculator
+FILENAME: TDEE.java
+VERSION: 1.0.0
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * This was a fun project to do. I learned how to use conditionals instead of a bunch of nested if statements.
+
+    * It was fun to experiment with System.out.format to display the output in a table-like format
+
+___ end PMR ________________________________________________________

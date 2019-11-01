@@ -61,7 +61,20 @@ public class TDEE {
     System.out.println();
 
     System.out.print("Enter the letter corresponding to your activity level:  ");
-    while (!in.hasNext("[abcdef]")) {
+    while (
+      !in.hasNext("a") &&
+      !in.hasNext("A") &&
+      !in.hasNext("b") &&
+      !in.hasNext("B") &&
+      !in.hasNext("c") &&
+      !in.hasNext("C") &&
+      !in.hasNext("d") &&
+      !in.hasNext("D") &&
+      !in.hasNext("e") &&
+      !in.hasNext("E") &&
+      !in.hasNext("f") &&
+      !in.hasNext("F")
+    ) {
       System.out.print("Try again. Please enter the letter corresponding to your activity level:  ");
       in.next();
     }
