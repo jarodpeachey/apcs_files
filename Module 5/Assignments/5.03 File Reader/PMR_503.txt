@@ -1,0 +1,10 @@
+TITLE: 5.03 Family Calculator
+FILENAME: Family.java
+VERSION: 1.0.0
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * This was awesome to do. It was interesting to work with other files, pulling data and doing stuff with it. I liked having to check for the value of the string (BB, BG) using Regex
+
+___ end PMR ________________________________________________________
