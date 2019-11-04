@@ -13,12 +13,17 @@ public class MathEquations
 {
     public static void main(String[] args)
     {
-      String phoneNum1 = "407-555-2207";
-      String phoneNum2 = "407-555-2207";
+      int number = 0;
+      while (number < 100){
+        int digit = (int) (Math.random()*10) + 1;
+        System.out.println(digit);
+        number++;
+      }
 
-      System.out.println(phoneNum1.compareTo(phoneNum2) > 0);
-      System.out.println(phoneNum1.compareTo(phoneNum2) == 0);
-      System.out.println(phoneNum1.compareTo(phoneNum2) > 0);
+      String phoneNum1 = "1234567890";
+      String areaCode1 = phoneNum1.substring(3);
+
+      System.out.println(areaCode1);
     } //end main
 }//end class Lottery
 
