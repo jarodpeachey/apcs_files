@@ -13,17 +13,9 @@ public class MathEquations
 {
     public static void main(String[] args)
     {
-      int number = 0;
-      while (number < 100){
-        int digit = (int) (Math.random()*10) + 1;
-        System.out.println(digit);
-        number++;
-      }
-
-      String phoneNum1 = "1234567890";
-      String areaCode1 = phoneNum1.substring(3);
-
-      System.out.println(areaCode1);
+for(int t = 0; t < 10; t++)
+     for(int f = 0; f < 1000; f++)
+        System.out.format("%20%20", "T: " + t, "F: " + f);
     } //end main
 }//end class Lottery
 
