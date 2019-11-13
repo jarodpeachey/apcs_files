@@ -1,18 +1,12 @@
-Trial 1
-Gray Squirrels:                       59
-Red Squirrels:                        59
-Fox Squirrels:                        10
-                              Total: 128
-
-Trial 2
-Gray Squirrels:                       66
-Red Squirrels:                        63
-Fox Squirrels:                        10
-                              Total: 139
-
-Trial 3
-Gray Squirrels:                       57
-Red Squirrels:                        51
-Fox Squirrels:                        10
-                              Total: 118
-
+ 
+Trial 1 --------------------------------
+                      Total Attempts: 79
+                       Fox Squirrels: 10
+ 
+Trial 2 --------------------------------
+                      Total Attempts: 87
+                       Fox Squirrels: 10
+ 
+Trial 3 --------------------------------
+                     Total Attempts: 106
+                       Fox Squirrels: 10
