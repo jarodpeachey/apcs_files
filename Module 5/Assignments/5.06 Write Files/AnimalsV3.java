@@ -20,7 +20,7 @@ class AnimalsV3 {
 
     Scanner in = new Scanner(System.in);
     int trials;
-    System.out.print("Enter number of trials: ");
+    System.out.print("How many trials do you want to run? ");
     do {
       System.out.println("Please enter a number above 1000:  ");
       trials = in.nextInt();
