@@ -1,0 +1,12 @@
+TITLE: 5.07 Challenge Program
+FILENAME: Challenge.java
+VERSION: 1.0.0
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * This was a cool challenge to do. I enjoyed learning the character codes for each item, and generating random characters
+
+    * It was challenging to create multiple ranges for a random digit
+
+___ end PMR ________________________________________________________

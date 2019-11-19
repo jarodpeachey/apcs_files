@@ -57,12 +57,12 @@ public class Challenge {
         System.out.print("Enter your password length (6 or more): ");
         do {
           if (!firstLoopLength) {
-            System.out.print("Please enter a number greater than 6:  ");
+            System.out.print("Please enter a number greater than 5:  ");
           }
           userPassLength = in.nextInt();
 
           firstLoopLength = false;
-        } while (userPassLength <= 6);
+        } while (userPassLength < 6);
 
         passwordLength = userPassLength;
       } else {

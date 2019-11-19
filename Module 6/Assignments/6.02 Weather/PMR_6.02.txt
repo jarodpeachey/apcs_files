@@ -1,0 +1,10 @@
+TITLE: 6.02 Formatting Output
+FILENAME: Weather.java
+VERSION: 1.0.0
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * This project was really neat to do. I've messed around with formatting before, and it was really neat to get to do it again, and learn even more about it.
+
+___ end PMR ________________________________________________________
