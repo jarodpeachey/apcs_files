@@ -8,7 +8,6 @@
  */
 
 import java.util.Scanner;
-import jdk.nashorn.internal.runtime.Undefined;
 import java.text.DecimalFormat;
 
 public class Weather {

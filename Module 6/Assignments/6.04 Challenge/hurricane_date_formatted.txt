@@ -1,0 +1,55 @@
+Hurricane data from 2010 to 2015
+
+2010           Alex                 2                 946              109.34
+2010           Danielle             4                 942              132.37
+2010           Earl                 4                 927              143.88
+2010           Igor                 4                 924              155.38
+2010           Julia                4                 948              138.12
+2010           Karl                 3                 956              126.61
+2010           Lisa                 1                 982               86.33
+2010           Otto                 1                 976               86.33
+2010           Paula                2                 981              103.59
+2010           Richard              2                 977               97.84
+2010           Shary                1                 989               74.81
+2010           Tomas                2                 985               97.84
+2011           Irene                3                 942              120.86
+2011           Katia                4                 942              138.12
+2011           Maria                1                 983               80.57
+2011           Nate                 1                 994               74.81
+2011           Ophelia              4                 940              138.12
+2011           Philippe             1                 976               92.08
+2011           Rina                 3                 966              115.10
+2012           Chris                1                 974               86.33
+2012           Ernesto              2                 973               97.84
+2012           Gordon               2                 965              109.34
+2012           Isaac                1                 965               80.57
+2012           Kirk                 2                 970              103.59
+2012           Leslie               1                 968               80.57
+2012           Michael              3                 964              115.10
+2012           Nadine               1                 978               92.08
+2012           Rafael               1                 969               92.08
+2012           Sandy                3                 940              115.10
+2013           Humberto             1                 979               92.08
+2013           Ingrid               1                 983               86.33
+2014           Arthur               2                 973               97.84
+2014           Bertha               1                 998               80.57
+2014           Cristobal            1                 965               86.33
+2014           Edouard              3                 955              120.86
+2014           Fay                  1                 983               80.57
+2014           Gonzalo              4                 940              143.88
+2015           Danny                3                 960              126.61
+2015           Fred                 1                 986               86.33
+2015           Joaquin              4                 931              155.38
+2015           Kate                 1                 980               86.33
+_____________________________________________________________________________
+
+Averages:                        2.12              965.24              105.56
+Minimum:                            1                 924               74.81
+Maximum:                            4                 998              155.38
+
+
+Total Category 1: 18
+Total Category 2: 8
+Total Category 3: 7
+Total Category 4: 8
+Total Category 5: 0
