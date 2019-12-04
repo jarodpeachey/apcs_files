@@ -1,0 +1,10 @@
+TITLE: 7.03 Methods
+FILENAME: Gravity.java
+VERSION: 1.0.0
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * This program was a great experience for me. I enjoyed figuring out scientific notation and formatting that in Java. It was also interesting to create seperate functions for certain tasks.
+
+___ end PMR ________________________________________________________

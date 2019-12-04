@@ -1,0 +1,9 @@
+TITLE: 6.04 Challenge Program
+FILENAME: Challenge.java
+VERSION: 1.0.0
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * This was an awesome project to do. I got to work with arrays and ArrayLists again, which was pretty cool. I used a new class item, Hurricane.java, to make it easier to loop through each hurricane.
+___ end PMR ________________________________________________________

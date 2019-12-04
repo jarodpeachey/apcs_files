@@ -13,15 +13,26 @@ import java.util.Scanner;
 
 public class MathEquations {
     public static void main(String[] args) {
-        double [] numList = {4.17, 3.11, 2.46, 1.57};
-        int x = 0;
-        for(double n : numList)
-        {
-            x += (int)n - 1;
+        String[] strings = new String[3];
+        strings[0] = "Jarod";
+        strings[1] = "William";
+        strings[2] = "Peachey";
+
+        double averageLength = returnAverageLength(strings);
+
+        System.out.println("The average length is: " + averageLength);
+    } // end main
+
+    public static double returnAverageLength(String[] strings) {
+        int totalLength = 0;
+        for (int i = 0; i < strings.length; i++) {
+            totalLength += strings[i].length();
         }
 
-        System.out.println(x);
-    } // end main
+        double average = (double)totalLength / (double)strings.length;
+
+        return average;
+    }
 }// end class Lottery
 
 /*

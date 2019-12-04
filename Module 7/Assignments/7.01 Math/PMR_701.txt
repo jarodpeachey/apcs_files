@@ -1,0 +1,9 @@
+TITLE: 7.01 Java Math
+FILENAME: CirclePoints.java
+VERSION: 1.0.0
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * This was very cool to complete. I enjoyed using the Math function to add practicality to my program and calculate the points of a circle.
+___ end PMR ________________________________________________________
