@@ -8,6 +8,7 @@
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.DecimalFormat;
 
 public class Gravity {
@@ -35,8 +36,19 @@ public class Gravity {
     }
   }
 
+  public static void writeData(double[] gravities) throws IOException {
+    File newOutFile = new File("gravity.txt");
+    PrintWriter outFile = new PrintWriter(newOutFile);
+
+    for (int i = 0; i < gravities.length; i++) {
+      outFile.println(gravities[i]);
+    }
+
+    outFile.close();
+  }
+
   // Main method
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
     String[] planets = { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" };
     double[] diameters = { 4880, 12103.6, 12756.3, 6794, 142984, 120536, 51118, 49532 };
     double[] masses = { 3.30e23, 4.869e24, 5.972e24, 6.4219e23, 1.900e27, 5.68e26, 8.683e25, 1.0247e26 };
@@ -44,5 +56,7 @@ public class Gravity {
     double[] gravities = calculateGravities(diameters, masses);
 
     printData(planets, diameters, masses, gravities);
+
+    writeData(gravities);
   }
 }
