@@ -31,14 +31,47 @@ public class Weight {
     return gravities;
   }
 
+  public static int getUserWeight() {
+    Scanner in = new Scanner(System.in);
+
+    System.out.println("What is your weight in pounds (rounded to the nearest whole number)?");
+    int userWeight = in.nextInt();
+
+    return userWeight;
+  }
+
+  public static double[] calculateWeights(String[] planets, double[] gravities, int userWeight) {
+    double mass = (double) userWeight * 453.59237;
+    double[] weights = new double[gravities.length];
+
+    for (int i = 0; i < planets.length; i++) {
+      double newWeight = mass * (gravities[i] / 9.8) / 453.59237;
+      weights[i] = newWeight;
+    }
+
+    return weights;
+  }
+
+  public static void printData(String[] planets, double[] gravities, double[] weights) {
+    DecimalFormat df = new DecimalFormat("#.00");
+    System.out.println();
+    System.out.printf("%-10s%10s%18s\n", "Planet", "Gravity", "Your Weight");
+    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    for (int i = 0; i < weights.length; i++) {
+      System.out.printf("%-10s%10s%18s\n", planets[i], df.format(gravities[i]), df.format(weights[i]));
+    }
+  }
+
   // Main method
   public static void main(String[] args) throws IOException {
     String[] planets = { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" };
 
     double[] gravities = readGravities(planets.length);
 
-    for (int i = 0; i < gravities.length; i++){
-      System.out.println(gravities[i]);
-    }
+    int userWeight = getUserWeight();
+
+    double[] weights = calculateWeights(planets, gravities, userWeight);
+
+    printData(planets, gravities, weights);
   }
 }
