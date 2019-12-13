@@ -1,0 +1,10 @@
+TITLE: 8.07 Multiple Objects
+FILENAME: PeopleV7.java + V7Test.java
+VERSION: 1.0.0
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * This program was a great experience. I enjoyed learning how to create multiple instances of the same class.
+
+___ end PMR ________________________________________________________
