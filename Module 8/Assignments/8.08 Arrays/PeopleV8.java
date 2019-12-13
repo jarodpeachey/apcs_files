@@ -4,6 +4,7 @@
  */
 
 public class PeopleV8 {
+  // Initiate private variables
   private String firstName;
   private String lastName;
   private int weight;
@@ -11,12 +12,14 @@ public class PeopleV8 {
   private double bmi;
   private double waterIntake;
 
+  // Main constructor
   public PeopleV8(String newFirstName, String newLastName, int newWeight, int newHeight) {
     firstName = newFirstName;
     lastName = newLastName;
     weight = newWeight;
     height = newHeight;
 
+    // Calculate the water intake and bmi
     this.setWaterIntake();
     this.setBMI();
   }
@@ -41,6 +44,7 @@ public class PeopleV8 {
     this.setWaterIntake();
   }
 
+  // These methods are private and cannot be accessed outside this class
   private void setWaterIntake() {
     waterIntake = 0.75 * height;
   }
