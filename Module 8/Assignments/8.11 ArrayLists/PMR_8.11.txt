@@ -1,0 +1,10 @@
+TITLE: 8.11 ArrayLists II
+FILENAME: Emissions.java and EmissionsTest.java
+VERSION: 1.0.0
+AUTHOR: Jarod Peachey
+
+___ PMR ____________________________________________________________
+
+    * This was a super cool program to build. I enjoyed formatting the output in the most user-friendly way possible, which taught me more about the Java printf() function.
+
+___ end PMR ________________________________________________________
