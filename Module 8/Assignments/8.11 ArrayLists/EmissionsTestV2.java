@@ -9,15 +9,15 @@
 import java.util.ArrayList;
 import java.text.DecimalFormat;
 
-public class EmissionsTest {
+public class EmissionsTestV2 {
   public static void main(String[] args) {
-    ArrayList<Emissions> households = new ArrayList<Emissions>();
-    households.add(new Emissions(5, false, true, false, false));
-    households.add(new Emissions(2, false, true, false, false));
-    households.add(new Emissions(6, false, false, true, false));
-    households.add(new Emissions(1, true, false, false, true));
-    households.add(new Emissions(3, false, true, false, false));
-    households.add(new Emissions(4, true, false, true, false));
+    ArrayList<EmissionsV2> households = new ArrayList<EmissionsV2>();
+    households.add(new EmissionsV2(5, false, true, false, false));
+    households.add(new EmissionsV2(2, false, true, false, false));
+    households.add(new EmissionsV2(6, false, false, true, false));
+    households.add(new EmissionsV2(1, true, false, false, true));
+    households.add(new EmissionsV2(3, false, true, false, false));
+    households.add(new EmissionsV2(4, true, false, true, false));
 
     for (Emissions dataRecord : households) {
       dataRecord.calcGrossWasteEmission();

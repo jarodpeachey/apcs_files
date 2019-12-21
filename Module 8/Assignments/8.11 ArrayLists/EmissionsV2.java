@@ -5,7 +5,7 @@
  * @version (enter today's date)
  *
  */
-public class Emissions {
+public class EmissionsV2 {
   private int myNumPeople;
   private boolean myPaper, myPlastic, myGlass, myCans;
   private double myEmissions, myReduction, myNetEmissions;
@@ -60,7 +60,7 @@ public class Emissions {
    * Mutator method to calculate the net emissions (no parameters)
    */
   public void calcNetWasteReduction() {
-    double netEmissions = myEmissions = myReduction;
+    double netEmissions = myEmissions - myReduction;
 
     myNetEmissions = netEmissions;
   }
