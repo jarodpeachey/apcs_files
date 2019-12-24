@@ -93,8 +93,16 @@ public class Weather {
       System.out.println("+---------+---------------+-----------------+");
       for (int i = 0; i < month.length; i++) {
         System.out.printf("|  %-5s  |%11s    |%12s     |\n", month[i],
-            df.format(city.getTemperature(i, userTempInput)) + tempLabel, df.format(city.getPrecipitation(i, userPrecipInput)) + precipLabel);
+            df.format(city.getTemperature(i, userTempInput)) + tempLabel,
+            df.format(city.getPrecipitation(i, userPrecipInput)) + precipLabel);
       }
+      System.out.println("+---------+---------------+-----------------+");
+      System.out.printf("|  %-5s  |%11s    |%12s     |\n", "MIN", df.format(city.getMinTemperature(tempLabel)) + tempLabel,
+          df.format(city.getMinPrecipitation(precipLabel)) + precipLabel);
+      System.out.printf("|  %-5s  |%11s    |%12s     |\n", "MAX", df.format(city.getMaxTemperature(tempLabel)) + tempLabel,
+          df.format(city.getMaxPrecipitation(precipLabel)) + precipLabel);
+      System.out.printf("|  %-5s  |%11s    |%12s     |\n", "AVG", df.format(city.getAverageTemperature(tempLabel)) + tempLabel,
+          df.format(city.getAveragePrecipitation(precipLabel)) + precipLabel);
       System.out.println("+---------+---------------+-----------------+");
     }
   }// end main

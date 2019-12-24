@@ -57,4 +57,102 @@ public class City {
       return precipitation[i];
     }
   }
+
+  public double getMinTemperature(String format) {
+    double minTemperature = Double.MAX_VALUE;
+
+    for (int i = 0; i < this.temperature.length; i++) {
+      if (temperature[i] < minTemperature) {
+        minTemperature = temperature[i];
+      }
+    }
+
+    if (format.equalsIgnoreCase("c")) {
+      return (minTemperature - 32) * (5.0 / 9.0);
+    } else {
+      return minTemperature;
+    }
+  }
+
+  public double getMaxTemperature(String format) {
+    double maxTemperature = 0.0;
+
+    for (int i = 0; i < this.temperature.length; i++) {
+      if (temperature[i] > maxTemperature) {
+        maxTemperature = temperature[i];
+      }
+    }
+
+    if (format.equalsIgnoreCase("c")) {
+      return (maxTemperature - 32) * (5.0 / 9.0);
+    } else {
+      return maxTemperature;
+    }
+  }
+
+  public double getAverageTemperature(String format) {
+    int count = 0;
+    double totalTemp = 0.0;
+    for (int i = 0; i < temperature.length; i++) {
+      totalTemp += temperature[i];
+      count++;
+    }
+
+    double averageTemperature = totalTemp / count;
+
+    if (format.equalsIgnoreCase("c")) {
+      return (averageTemperature - 32) * (5.0 / 9.0);
+    } else {
+      return averageTemperature;
+    }
+  }
+
+  public double getMinPrecipitation(String format) {
+    double minPrecipitation = Double.MAX_VALUE;
+
+    for (int i = 0; i < this.precipitation.length; i++) {
+      if (precipitation[i] < minPrecipitation) {
+        minPrecipitation = precipitation[i];
+      }
+    }
+
+    if (format.equalsIgnoreCase("c")) {
+      return minPrecipitation * 2.54;
+    } else {
+      return minPrecipitation;
+    }
+  }
+
+  public double getMaxPrecipitation(String format) {
+    double maxPrecipitation = 0.0;
+
+    for (int i = 0; i < this.precipitation.length; i++) {
+      if (precipitation[i] > maxPrecipitation) {
+        maxPrecipitation = precipitation[i];
+      }
+    }
+
+    if (format.equalsIgnoreCase("c")) {
+      return maxPrecipitation * 2.54;
+    } else {
+      return maxPrecipitation;
+    }
+  }
+
+  public double getAveragePrecipitation(String format) {
+    int count = 0;
+    double totalPrecip = 0.0;
+    for (int i = 0; i < precipitation.length; i++) {
+      totalPrecip += precipitation[i];
+      count++;
+    }
+
+    double averagePrecipitation = totalPrecip / count;
+
+    if (format.equalsIgnoreCase("c")) {
+      return averagePrecipitation * 2.54;
+    } else {
+      return averagePrecipitation;
+    }
+  }
 }
