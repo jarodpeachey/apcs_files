@@ -1,38 +1,30 @@
-
-/**
- * The Lottery program generates a 3-digit random lottery number ranging
- * from 000 to 999 (inclusive). The user takes a guess and the program
- * provides feedback if the front pair, back pair, all three, or none
- * of the digits match.
- *
- * @author Ada Lovelace
- * @version 7/1/2019
- */
-
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class MathEquations {
-    public static void main(String[] args) {
-        String[] strings = new String[3];
-        strings[0] = "Jarod";
-        strings[1] = "William";
-        strings[2] = "Peachey";
+  public static void main(String[] args) {
+    ArrayList<Integer> aList = new ArrayList<Integer>();
 
-        double averageLength = returnAverageLength(strings);
+    aList.add(3);
+    aList.add(5);
+    aList.add(9);
+    aList.add(7);
+    aList.add(4);
+    aList.add(2);
+    aList.add(41);
 
-        System.out.println("The average length is: " + averageLength);
-    } // end main
-
-    public static double returnAverageLength(String[] strings) {
-        int totalLength = 0;
-        for (int i = 0; i < strings.length; i++) {
-            totalLength += strings[i].length();
-        }
-
-        double average = (double)totalLength / (double)strings.length;
-
-        return average;
+    System.out.println();
+    for (Integer person : aList) {
+      System.out.println(person);
     }
+
+    aList.add(3, -100);
+
+    System.out.println();
+    for (Integer person : aList) {
+      System.out.println(person);
+    }
+  } // end main
 }// end class Lottery
 
 /*

@@ -5,7 +5,7 @@
  * @version (enter today's date)
  *
  */
-public class City {
+public class CityOOP {
   private double[] temperature, precipitation;
   private String city, state;
 
@@ -17,7 +17,7 @@ public class City {
    * @param newTemperature   --- Array of temperatures
    * @param newPrecipitation - Array of precipitation
    */
-  City(String newCity, String newState, double[] newTemperature, double[] newPrecipitation) {
+  CityOOP(String newCity, String newState, double[] newTemperature, double[] newPrecipitation) {
     city = newCity;
     state = newState;
     precipitation = newPrecipitation;

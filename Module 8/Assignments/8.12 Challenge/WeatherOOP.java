@@ -11,33 +11,33 @@ import java.util.Scanner;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-public class Weather {
+public class WeatherOOP {
   public static void main(String[] args) {
     // Declare and initialize variables
     Scanner in = new Scanner(System.in);
     String[] month = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sept", "Oct", "Nov", "Dec" };
 
-    ArrayList<City> cities = new ArrayList<City>();
+    ArrayList<CityOOP> cities = new ArrayList<CityOOP>();
 
     // City One
     double[] temperatureOne = { 63.0, 63.9, 67.7, 71.5, 76.2, 80.4, 81.7, 81.6, 80.1, 76.4, 70.5, 64.7 };
     double[] precipitationOne = { 2.9, 2.5, 4.2, 2.9, 3.8, 6.0, 6.5, 6.0, 6.8, 5.0, 3.0, 2.2 };
-    cities.add(new City("Vero Beach", "Florida", temperatureOne, precipitationOne));
+    cities.add(new CityOOP("Vero Beach", "Florida", temperatureOne, precipitationOne));
 
     // City Two
     double[] temperatureTwo = { 40.0, 43.1, 51.4, 56.4, 68.4, 73.4, 80.1, 79.4, 72.5, 68.5, 61.1, 54.1 };
     double[] precipitationTwo = { 1.4, 4.2, 4.2, 4.8, 2.5, 6.0, 2.9, 6.5, 6.8, 2.9, 3.0, 2.5 };
-    cities.add(new City("Dallas", "Texas", temperatureTwo, precipitationTwo));
+    cities.add(new CityOOP("Dallas", "Texas", temperatureTwo, precipitationTwo));
 
     // City Three
     double[] temperatureThree = { 40.9, 44.2, 49.4, 53.6, 65.3, 74.1, 78.0, 83.4, 78.3, 65.2, 56.7, 48.5 };
     double[] precipitationThree = { 1.5, 4.2, 3.2, 2.8, 2.3, 2.0, 5.9, 3.5, 2.5, 2.2, 4.0, 3.5 };
-    cities.add(new City("Annapolis", "Maryland", temperatureThree, precipitationThree));
+    cities.add(new CityOOP("Annapolis", "Maryland", temperatureThree, precipitationThree));
 
     // City Four
     double[] temperatureFour = { 63.0, 63.9, 67.7, 71.5, 76.2, 80.4, 81.7, 81.6, 80.1, 76.4, 70.5, 64.7 };
     double[] precipitationFour = { 1.4, 4.2, 4.2, 4.8, 2.5, 6.0, 2.9, 6.5, 6.8, 2.9, 3.0, 2.5 };
-    cities.add(new City("Chester", "Virginia", temperatureFour, precipitationFour));
+    cities.add(new CityOOP("Chester", "Virginia", temperatureFour, precipitationFour));
 
     String userTempInput;
     Boolean firstLoopTemp = true;
