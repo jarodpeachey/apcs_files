@@ -3,22 +3,21 @@ import java.util.ArrayList;
 
 public class MathEquations {
   public static void main(String[] args) {
-    System.out.println(recur("mouse", 1));
-    
-  } // end main
+    int n1 = 0, n2 = 16;
+    int hcf = hcf(n1, n2);
+    System.out.println(hcf);
+  }
 
-public static String recur(String str, int n)
-{
-     if(n >= str.length())
-     {
-          return str;
-     }
-
-     return str + recur(str.substring(n + 1), n);
+  public static int hcf(int n1, int n2) {
+    if (n2 != 0)
+      return hcf(n2, n1 % n2);
+    else
+      return n1;
+  }
 }
-}// end class Lottery
 
 /*
+
 javac MathEquations.java
 java MathEquations
  */
