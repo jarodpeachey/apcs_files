@@ -5,12 +5,12 @@
  * @version 2-18-2020
  */
 
-public class Cylinder extends Circle {
+public class Cylinder303 extends Circle303 {
   // instance variables
   private int height;
 
   // Constructor for objects of class Cylinder
-  public Cylinder(int x, int y, int rad, int h) {
+  public Cylinder303(int x, int y, int rad, int h) {
     // call superclass
     super(x, y, rad);
 

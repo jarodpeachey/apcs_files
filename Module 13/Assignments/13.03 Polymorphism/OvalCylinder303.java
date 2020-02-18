@@ -5,12 +5,12 @@
  * @version 2-18-2020
  */
 
-public class OvalCylinder extends Oval {
+public class OvalCylinder303 extends Oval303 {
   // instance variables
   private int height;
 
   // Constructor for objects of class OvalCylinder
-  public OvalCylinder(int x, int y, int rad1, int rad2, int h) {
+  public OvalCylinder303(int x, int y, int rad1, int rad2, int h) {
     // call superclass
     super(x, y, rad1, rad2);
 

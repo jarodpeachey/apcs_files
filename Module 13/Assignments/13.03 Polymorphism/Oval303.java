@@ -5,12 +5,12 @@
  * @version 2-18-2020
  */
 
-public class Oval extends Circle {
+public class Oval303 extends Circle303 {
   // instance variables
   private int radius2;
 
   // Constructor for objects of class Oval
-  public Oval(int x, int y, int rad1, int rad2) {
+  public Oval303(int x, int y, int rad1, int rad2) {
     // call superclass
     super(x, y, rad1);
 
