@@ -31,17 +31,21 @@ public class Cube304 extends Box304 {
     return value;
   }
 
+  public String getType() {
+    return "Cube";
+  }
+
   // String to display when object is printed.
   public String toString() {
     return "The cube's dimensions are " + getLength() + " X " + getWidth() + " X " + getHeight();
   }
 
-  public Boolean equals(Rectangle304 compareObj) {
-    if (compareObj.getHeight() == getHeight() && compareObj.getWidth() == getWidth()
-        && compareObj.getLength() == getLength()) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  // public Boolean equals(Rectangle304 compareObj) {
+  //   if (compareObj.getHeight() == getHeight() && compareObj.getWidth() == getWidth()
+  //       && compareObj.getLength() == getLength()) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 }

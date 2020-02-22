@@ -24,18 +24,26 @@ public class Box304 extends Rectangle304 {
     return height;
   }
 
+  public String getSize() {
+    return getLength() + " X " + getWidth() + " X " + getHeight();
+  }
+
+  public String getType() {
+    return "Box";
+  }
+
   // String to display when object is printed.
 
   public String toString() {
     return "The box's dimensions are " + getLength() + " X " + getWidth() + " X " + height;
   }
 
-  public Boolean equals(Rectangle304 compareObj) {
-    if (compareObj.getHeight() == getHeight() && compareObj.getWidth() == getWidth()
-        && compareObj.getLength() == getLength()) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  // public Boolean equals(Rectangle304 compareObj) {
+  //   if (compareObj.getHeight() == getHeight() && compareObj.getWidth() == getWidth()
+  //       && compareObj.getLength() == getLength()) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 }

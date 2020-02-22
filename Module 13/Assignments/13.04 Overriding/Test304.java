@@ -26,13 +26,15 @@ public class Test304 {
     shapes.add(cubeOne);
     shapes.add(cubeTwo);
 
-    for (Rectangle304 shape : shapes) {
-      System.out.println(shape);
-      showEffectBoth(shape);
+    for (int i = 0; i < shapes.size(); i++) {
+      showEffectBoth(shapes.get(i));
       System.out.println();
     }
 
-    System.out.println(boxOne.equals(rectangleOne));
+    System.out.println(boxOne.getType() + " " + boxOne.getSize() + " " + boxOne.equals(rectangleOne));
+    System.out.println(rectangleTwo.getType() + " " + rectangleTwo.getSize() + " " + rectangleTwo.equals(cubeTwo));
+    System.out.println(boxOne.getType() + " " + boxOne.getSize() + " " + boxOne.equals(cubeOne));
+    System.out.println(boxOne.getType() + " " + boxOne.getSize() + " " + boxOne.equals(cubeTwo));
   }
 
   public static void showEffectBoth(Rectangle304 r) {

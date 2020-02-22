@@ -33,18 +33,26 @@ public class Rectangle304 {
     return 0;
   }
 
+  public String getSize() {
+    return getLength() + " X " + getWidth();
+  }
+
+  public String getType() {
+    return "Rectangle";
+  }
+
   // String to display when object is printed.
 
   public String toString() {
     return "The rectangle's dimensions are " + length + " X " + width;
   }
 
-  public Boolean equals(Rectangle304 compareObj) {
+  public String equals(Rectangle304 compareObj) {
     if (compareObj.getHeight() == getHeight() && compareObj.getWidth() == getWidth()
         && compareObj.getLength() == getLength()) {
-      return true;
+      return "IS equal to " + compareObj.getType() + " " + compareObj.getSize();
     } else {
-      return false;
+      return "is NOT equal to " + compareObj.getType() + " " + compareObj.getSize();
     }
   }
 }
