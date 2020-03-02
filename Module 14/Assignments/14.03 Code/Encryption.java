@@ -31,25 +31,15 @@ public class Encryption {
     for (int i = 0; i < oldMessageArray.size(); i++) {
       Character oldChar = oldMessageArray.get(i);
 
-      int oldCharIndex = 0;
-
-      for (int j = 0; j < alphabet.length; j++) {
-        if (oldChar != ' ') {
+      if (oldChar != ' ') {
+        for (int j = 0; j < alphabet.length; j++) {
           if (alphabet[j] == oldChar) {
-            oldCharIndex = j;
-          } else {
-
+            newMessageArray.add(alphabet[j + shift]);
           }
-        } else {
-          newMessageArray.add(oldChar);
         }
+      } else {
+        newMessageArray.add(oldChar);
       }
-
-      int newCharIndex = oldCharIndex + shift;
-
-      Character newChar = alphabet[newCharIndex];
-
-      newMessageArray.add(newChar);
     }
 
     StringBuilder builder = new StringBuilder(newMessageArray.size());
