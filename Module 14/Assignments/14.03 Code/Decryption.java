@@ -8,19 +8,19 @@
 
 import java.util.ArrayList;
 
-public class Encryption {
+public class Decryption {
   // instance variables
   private final Character[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
       'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
   private int shift = 0;
 
   // Constructor for objects of class Circle
-  public Encryption(int newShift) {
+  public Decryption(int newShift) {
     // initialize instance variables
     shift = newShift;
   }
 
-  public String encryptMessage(String message) {
+  public String decryptMessage(String message) {
     ArrayList<Character> oldMessageArray = new ArrayList<Character>();
     ArrayList<Character> newMessageArray = new ArrayList<Character>();
 
@@ -34,9 +34,9 @@ public class Encryption {
       if (oldChar != ' ') {
         for (int j = 0; j < alphabet.length; j++) {
           if (alphabet[j] == oldChar) {
-            newMessageArray.add(alphabet[j + shift]);
+            newMessageArray.add(alphabet[j - shift]);
           } else if (alphabet[j] == Character.toLowerCase(oldChar)) {
-            newMessageArray.add(Character.toUpperCase(alphabet[j + shift]));
+            newMessageArray.add(Character.toUpperCase(alphabet[j - shift]));
           }
         }
       } else {
