@@ -1,9 +1,9 @@
 
 /**
- * This program displays the weather data for an area and formats it.
+ * This program enables the user to decrypt and encrypt a message using the Ceaser shift
  * 
  * @author Jarod Peachey
- * @version 11/19/19
+ * @version 1.0.0
  *
  */
 

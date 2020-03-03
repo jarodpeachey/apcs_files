@@ -1,9 +1,9 @@
-
 /**
- * This class defines a Circle for inheritance
- *
+ * This program enables the user to decrypt and encrypt a message using the Ceaser shift
+ * 
  * @author Jarod Peachey
- * @version 2-18-2020
+ * @version 1.0.0
+ *
  */
 
 import java.util.ArrayList;
