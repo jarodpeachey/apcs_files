@@ -9,7 +9,7 @@
 
 import java.util.ArrayList;
 
-public class Decryption {
+public class Decryption2 {
   // instance variables
   private final Character[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
       'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
@@ -17,7 +17,7 @@ public class Decryption {
   private int shift = 0;
 
   // Constructor for objects of class Circle
-  public Decryption(int newShift) {
+  public Decryption2(int newShift) {
     // initialize instance variables
     shift = newShift;
   }

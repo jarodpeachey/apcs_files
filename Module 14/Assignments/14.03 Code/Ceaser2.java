@@ -10,7 +10,7 @@
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
-public class Ceaser {
+public class Ceaser2 {
   static Boolean encryptAnotherMessage = false;
   static int mode = 1;
 
@@ -64,9 +64,9 @@ public class Ceaser {
 
     int shiftValue = userShiftInput;
 
-    Encryption encrypter = new Encryption(shiftValue);
+    Encryption2 encrypter = new Encryption2(shiftValue);
 
-    Decryption decrypter = new Decryption(shiftValue);
+    Decryption2 decrypter = new Decryption2(shiftValue);
     System.out.println();
     System.out.print("Enter your message to encrypt:  ");
 
@@ -97,7 +97,7 @@ public class Ceaser {
 
     int shiftValue = userShiftInput;
 
-    Decryption decrypter = new Decryption(shiftValue);
+    Decryption2 decrypter = new Decryption2(shiftValue);
     System.out.println();
     System.out.print("Enter your message to decrypt:  ");
 
