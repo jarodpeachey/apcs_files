@@ -1,3 +1,4 @@
+
 /**
  * This program enables the user to decrypt and encrypt a message using the Ceaser shift
  * 
@@ -11,7 +12,8 @@ import java.util.ArrayList;
 public class Decryption {
   // instance variables
   private final Character[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
-      'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+      'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
   private int shift = 0;
 
   // Constructor for objects of class Circle
@@ -32,7 +34,7 @@ public class Decryption {
       Character oldChar = oldMessageArray.get(i);
 
       if (oldChar != ' ') {
-        for (int j = 0; j < alphabet.length; j++) {
+        for (int j = 0; j < alphabet.length / 2; j++) {
           if (alphabet[j] == oldChar) {
             newMessageArray.add(alphabet[j - shift]);
           } else if (alphabet[j] == Character.toLowerCase(oldChar)) {
