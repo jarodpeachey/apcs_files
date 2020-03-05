@@ -9,7 +9,7 @@
 
 import java.util.ArrayList;
 
-public class Decryption2 {
+public class Decryption3 {
   // instance variables
   private final Character[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
       'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
@@ -17,7 +17,7 @@ public class Decryption2 {
   private int shift = 0;
 
   // Constructor for objects of class Circle
-  public Decryption2(int newShift) {
+  public Decryption3(int newShift) {
     // initialize instance variables
     shift = newShift;
   }
@@ -36,9 +36,17 @@ public class Decryption2 {
       if (oldChar != ' ') {
         for (int j = 0; j < alphabet.length / 2; j++) {
           if (alphabet[j] == oldChar) {
-            newMessageArray.add(alphabet[j - shift]);
+            if (j - shift >= 0) {
+              newMessageArray.add(alphabet[j - shift]);
+            } else {
+              newMessageArray.add(alphabet[(j + 26) - shift]);
+            }
           } else if (alphabet[j] == Character.toLowerCase(oldChar)) {
-            newMessageArray.add(Character.toUpperCase(alphabet[j - shift]));
+            if (j - shift >= 0) {
+              newMessageArray.add(alphabet[j - shift]);
+            } else {
+              newMessageArray.add(alphabet[(j + 26) - shift]);
+            }
           }
         }
       } else {
