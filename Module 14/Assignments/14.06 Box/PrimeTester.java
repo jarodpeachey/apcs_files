@@ -1,6 +1,6 @@
 
 /**
- * This program enables the user to decrypt and encrypt a message using the Ceaser shift
+ * This program calculates all prime numbers within a set range
  * 
  * @author Jarod Peachey
  * @version 1.0.0
@@ -8,7 +8,6 @@
  */
 
 import java.util.Scanner;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class PrimeTester {
@@ -46,7 +45,7 @@ public class PrimeTester {
     if (mode == 1) {
       customRange(in);
     } else {
-      randomRange(in);
+      randomRange();
     }
   }
 
@@ -98,7 +97,7 @@ public class PrimeTester {
     checkAddAnother(in);
   }
 
-  public static void randomRange(Scanner in) {
+  public static void randomRange() {
     int low = 0;
     int high = 5000;
 

@@ -1,6 +1,6 @@
 
 /**
- * This program enables the user to decrypt and encrypt a message using the Ceaser shift
+ * This class calculates all prime numbers in a given range
  * 
  * @author Jarod Peachey
  * @version 1.0.0
