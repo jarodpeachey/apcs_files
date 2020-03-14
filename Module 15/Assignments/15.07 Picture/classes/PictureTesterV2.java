@@ -28,11 +28,49 @@ public class PictureTester {
     beach.explore();
   }
 
+  public static void testNegate() {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+  }
+
+  public static void testGrayscale() {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.grayscale();
+    beach.explore();
+  }
+
   /** Method to test mirrorVertical */
   public static void testMirrorVertical() {
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
+    caterpillar.explore();
+  }
+
+  /** Method to test mirrorVertical */
+  public static void testMirrorVerticalRightToLeft() {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }
+
+  /** Method to test mirrorVertical */
+  public static void testMirrorHorizontal() {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore();
+  }
+
+  /** Method to test mirrorHorizontal */
+  public static void testMirrorHorizontalBottomToTop() {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBottomToTop();
     caterpillar.explore();
   }
 
@@ -42,6 +80,22 @@ public class PictureTester {
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
+  }
+
+  /** Method to test mirrorArms */
+  public static void testMirrorArms() {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+
+  /** Method to test mirrorGull */
+  public static void testMirrorGull() {
+    Picture snowman = new Picture("seagull.jpg");
+    snowman.explore();
+    snowman.mirrorGull();
+    snowman.explore();
   }
 
   /** Method to test the collage method */
@@ -67,7 +121,7 @@ public class PictureTester {
 
     // Activity 5
     // testZeroBlue();
-    testKeepOnlyBlue();
+    // testKeepOnlyBlue();
     // testKeepOnlyRed();
     // testKeepOnlyGreen();
     // testNegate();
@@ -80,7 +134,7 @@ public class PictureTester {
     // testMirrorVertical();
     // testMirrorVerticalRightToLeft();
     // testMirrorHorizontal();
-    // testMirrorHorizontalBotToTop();
+    // testMirrorHorizontalBottomToTop();
 
     // Activity 6 Challenge - optional
     // testMirrorDiagonal();
@@ -88,7 +142,7 @@ public class PictureTester {
     // Activity 7
     // testMirrorTemple();
     // testMirrorArms();
-    // testMirrorGull();
+    testMirrorGull();
 
     // Activity 8
     // testCollage();
