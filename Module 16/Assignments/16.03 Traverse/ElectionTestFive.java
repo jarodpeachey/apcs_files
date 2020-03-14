@@ -1,4 +1,3 @@
-
 /**
  *
  *
@@ -7,10 +6,11 @@
  */
 
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.text.DecimalFormat;
 
-public class ElectionTestThree {
+public class ElectionTestFive {
   public static Candidate[] candidates;
 
   public static void main(String[] args) {
@@ -26,10 +26,18 @@ public class ElectionTestThree {
 
     // updateName("George Washington", "Bill Clinton");
     // updateVotes("Teddy Roosevelt", 350);
-    updateNameAndVotes("Andrew Jackson", "John Adams", 350);
+    // updateNameAndVotes("Andrew Jackson", "John Adams", 350);
+
+    // addCandidate(6, "Donald Trump", 612);
+    // addCandidate("George Washington", "Donald Trump", 612);
+    // addCandidate("Donald Trump", 612);
 
     printAllData();
   }
+
+  /*
+   * PRINT METHODS FOR CANDIDATES
+   ********************************/
 
   public static void printAllData() {
     System.out.println();
@@ -68,6 +76,10 @@ public class ElectionTestThree {
     System.out.println();
   }
 
+  /*
+   * GETTER METHODS FOR CANDIDATES
+   ********************************/
+
   public static int getTotalVotes() {
     int totalVotes = 0;
 
@@ -84,6 +96,81 @@ public class ElectionTestThree {
     return percentage;
   }
 
+  /*
+   * ADD METHODS FOR CANDIDATES
+   ********************************/
+  public static void addCandidate(int position, String name, int votes) {
+    if (position > candidates.length) {
+      System.out.println("<< Adding " + name + " in position " + candidates.length + " with " + votes + " votes. >>");
+
+      ArrayList<Candidate> temp = new ArrayList<Candidate>();
+
+      for (int i = 0; i < candidates.length; i++) {
+        temp.add(candidates[i]);
+      }
+
+      temp.add(new Candidate(name, votes));
+
+      candidates = temp.toArray(new Candidate[temp.size()]);
+    } else {
+      System.out.println("<< Adding " + name + " in position " + position + " with " + votes + " votes. >>");
+
+      ArrayList<Candidate> temp = new ArrayList<Candidate>();
+
+      for (int i = 0; i < candidates.length; i++) {
+        temp.add(candidates[i]);
+      }
+
+      temp.add(position, new Candidate(name, votes));
+
+      candidates = temp.toArray(new Candidate[temp.size()]);
+    }
+  }
+
+  public static void addCandidate(String nameSearch, String name, int votes) {
+    boolean foundMatch = false;
+    int index = 0;
+
+    for (int i = 0; i < candidates.length; i++) {
+      if (candidates[i].getName() == nameSearch) {
+        foundMatch = true;
+        index = i;
+      }
+    }
+    if (foundMatch) {
+      System.out.println("<< Adding " + name + ", with " + votes + "votes, before " + nameSearch + " >>");
+
+      ArrayList<Candidate> temp = new ArrayList<Candidate>();
+
+      for (int i = 0; i < candidates.length; i++) {
+        temp.add(candidates[i]);
+      }
+
+      temp.add(index, new Candidate(name, votes));
+
+      candidates = temp.toArray(new Candidate[temp.size()]);
+    } else {
+      System.out.println("<< Failed adding " + name + ": could not find candidate " + nameSearch + ". >>");
+    }
+  }
+
+  public static void addCandidate(String name, int votes) {
+    System.out.println("<< Adding " + name + " in position " + candidates.length + " with " + votes + " votes. >>");
+
+      ArrayList<Candidate> temp = new ArrayList<Candidate>();
+
+      for (int i = 0; i < candidates.length; i++) {
+        temp.add(candidates[i]);
+      }
+
+      temp.add(new Candidate(name, votes));
+
+      candidates = temp.toArray(new Candidate[temp.size()]);
+  }
+
+  /*
+   * UPDATE METHODS FOR CANDIDATES
+   ********************************/
   public static void updateName(String name, String replace) {
     for (int i = 0; i < candidates.length; i++) {
       if (candidates[i].getName() == name) {

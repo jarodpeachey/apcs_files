@@ -1,6 +1,6 @@
 
 /**
- * Purpose: This class defines a Candidate by its name and number of votes.
+ *
  *
  * @author < your name >
  * @version < today's date >

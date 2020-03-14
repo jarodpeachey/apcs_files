@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.text.DecimalFormat;
 
-public class ElectionTestFour {
+public class ElectionTestSix {
   public static ArrayList<Candidate> candidates = new ArrayList<Candidate>();
 
   public static void main(String[] args) {
@@ -25,10 +25,18 @@ public class ElectionTestFour {
 
     // updateName("George Washington", "Bill Clinton");
     // updateVotes("Teddy Roosevelt", 350);
-    updateNameAndVotes("Andrew Jackson", "John Adams", 350);
+    // updateNameAndVotes("Andrew Jackson", "John Adams", 350);
+
+    // addCandidate(6, "Donald Trump", 612);
+    // addCandidate("George Washington", "Donald Trump", 612);
+    // addCandidate("Donald Trump", 612);
 
     printAllData();
   }
+
+  /*
+   * PRINT METHODS FOR CANDIDATES
+   ********************************/
 
   public static void printAllData() {
     System.out.println();
@@ -67,6 +75,10 @@ public class ElectionTestFour {
     System.out.println();
   }
 
+  /*
+   * GETTER METHODS FOR CANDIDATES
+   ********************************/
+
   public static int getTotalVotes() {
     int totalVotes = 0;
 
@@ -83,6 +95,45 @@ public class ElectionTestFour {
     return percentage;
   }
 
+  /*
+   * ADD METHODS FOR CANDIDATES
+   ********************************/
+  public static void addCandidate(int position, String name, int votes) {
+    if (position > candidates.size()) {
+      System.out.println("<< Adding " + name + " in position " + candidates.size() + " with " + votes + " votes. >>");
+      candidates.add(new Candidate(name, votes));
+    } else {
+      System.out.println("<< Adding " + name + " in position " + position + " with " + votes + " votes. >>");
+      candidates.add(position, new Candidate(name, votes));
+    }
+  }
+
+  public static void addCandidate(String nameSearch, String name, int votes) {
+    boolean foundMatch = false;
+    int index = 0;
+
+    for (int i = 0; i < candidates.size(); i++) {
+      if (candidates.get(i).getName() == nameSearch) {
+        foundMatch = true;
+        index = i;
+      }
+    }
+    if (foundMatch) {
+      System.out.println("<< Adding " + name + ", with " + votes + " votes, before " + nameSearch + " >>");
+      candidates.add(index, new Candidate(name, votes));
+    } else {
+      System.out.println("<< Failed adding " + name + ": could not find candidate " + nameSearch + ". >>");
+    }
+  }
+
+  public static void addCandidate(String name, int votes) {
+    System.out.println("<< Adding " + name + " in position " + candidates.size() + " with " + votes + " votes. >>");
+    candidates.add(new Candidate(name, votes));
+  }
+
+  /*
+   * UPDATE METHODS FOR CANDIDATES
+   ********************************/
   public static void updateName(String name, String replace) {
     for (int i = 0; i < candidates.size(); i++) {
       if (candidates.get(i).getName() == name) {
