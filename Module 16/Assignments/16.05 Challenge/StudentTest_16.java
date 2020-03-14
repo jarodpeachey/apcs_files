@@ -11,21 +11,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.text.DecimalFormat;
 
-public class StudentTest {
-  public static ArrayList<Student> students = new ArrayList<Student>();
+public class StudentTest_16 {
+  public static ArrayList<Student_16> students = new ArrayList<Student_16>();
 
   public static void main(String[] args) {
-    students.add(new Student("James White", new Double[] { 88.4, 97.0, 56.5, 45.7, 98.4 }));
-    students.add(new Student("James Brown", new Double[] { 67.4, 97.7, 56.5, 87.4, 82.5 }));
-    students.add(new Student("James Black", new Double[] { 93.5, 85.7, 9.41, 96.5, 72.0 }));
-    students.add(new Student("James Green", new Double[] { 84.4, 75.7, 92.0, 100.0, 86.5 }));
-    students.add(new Student("James Gray", new Double[] { 76.4, 82.0, 65.5, 83.4, 97.7 }));
+    students.add(new Student_16("James White", new Double[] { 88.4, 97.0, 56.5, 45.7, 98.4 }));
+    students.add(new Student_16("James Brown", new Double[] {67.4, 97.7, 56.5, 87.4, 82.5}));
+    students.add(new Student_16("James Black", 93.5, 85.7, 9.41, 96.5, 72.0));
+    students.add(new Student_16("James Green", new Double[] { 84.4, 75.7, 92.0, 100.0, 86.5 }));
+    students.add(new Student_16("James Gray", new Double[] { 76.4, 82.0, 65.5, 83.4, 97.7 }));
 
     printAllData();
 
     // updateName("James Black", "James Smith");
     // updateQuiz("James Black", 5, 87.5);
-    // replaceStudent("James Black", new Student("James Smith", new Double[] { 88.4, 97.0, 56.5, 45.7, 98.4 }));
+    // replaceStudent("James Black", new Student_16("James Smith", new Double[] {
+    // 88.4, 97.0, 56.5, 45.7, 98.4 }));
 
     // addStudent(6, "James Smith", new Double[] { 88.4, 97.0, 56.5, 45.7, 98.4 });
     // addStudent("James Black", "James Smith", new Double[] { 88.4, 97.0, 56.5,
@@ -94,10 +95,10 @@ public class StudentTest {
   public static void addStudent(int position, String name, Double[] scores) {
     if (position > students.size()) {
       System.out.println("<< Adding " + name + " in position " + students.size() + " >>");
-      students.add(new Student(name, scores));
+      students.add(new Student_16(name, scores));
     } else {
       System.out.println("<< Adding " + name + " in position " + position + " >>");
-      students.add(position, new Student(name, scores));
+      students.add(position, new Student_16(name, scores));
     }
   }
 
@@ -113,7 +114,7 @@ public class StudentTest {
     }
     if (foundMatch) {
       System.out.println("<< Adding " + name + " before " + nameSearch + " >>");
-      students.add(index, new Student(name, scores));
+      students.add(index, new Student_16(name, scores));
     } else {
       System.out
           .println("<< Failed adding " + name + ": could not find student " + nameSearch + " to insert before. >>");
@@ -122,7 +123,7 @@ public class StudentTest {
 
   public static void addStudent(String name, Double[] scores) {
     System.out.println("<< Adding " + name + " in position " + students.size() + " >>");
-    students.add(new Student(name, scores));
+    students.add(new Student_16(name, scores));
   }
 
   /*
@@ -187,7 +188,7 @@ public class StudentTest {
     }
   }
 
-  public static void replaceStudent(String name, Student newStudent) {
+  public static void replaceStudent(String name, Student_16 newStudent) {
     for (int i = 0; i < students.size(); i++) {
       if (students.get(i).getName() == name) {
         System.out.println("<< Replacing " + name + " with " + newStudent.getName() + " >>");

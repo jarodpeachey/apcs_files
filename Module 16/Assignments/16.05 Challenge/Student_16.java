@@ -9,13 +9,13 @@
 import java.util.ArrayList;
 import java.text.DecimalFormat;
 
-public class Student {
+public class Student_16 {
   // instance variables
   private String name;
   private ArrayList<Double> scores = new ArrayList<Double>();
 
-  // Constructor for objects of class Student
-  public Student(String name, double scoreOne, double scoreTwo, double scoreThree, double scoreFour, double scoreFive) {
+  // Constructor for objects of class Student_16
+  public Student_16(String name, double scoreOne, double scoreTwo, double scoreThree, double scoreFour, double scoreFive) {
     // initialize instance variables
     this.name = name;
 
@@ -26,16 +26,8 @@ public class Student {
     scores.add(scoreFive);
   }
 
-  // Constuctor that accepts ArrayList of scores
-  public Student(String name, ArrayList<Double> scores) {
-    // initialize instance variables
-    this.name = name;
-
-    this.scores = scores;
-  }
-
   // Constuctor that accepts array of scores
-  public Student(String name, Double[] scores) {
+  public Student_16(String name, Double[] scores) {
     // initialize instance variables
     this.name = name;
 
