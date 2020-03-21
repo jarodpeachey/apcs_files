@@ -11,24 +11,25 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.text.DecimalFormat;
 
-public class StoreTest {
-  public static ArrayList<StoreItem> items = new ArrayList<StoreItem>();
+public class StoreTest17 {
+  public static ArrayList<StoreItem17> items = new ArrayList<StoreItem17>();
 
   public static void main(String[] args) {
-    items.add(new StoreItem("Toy Gun", 12.50, 2352, 6));
-    items.add(new StoreItem("Toy Car", 5.99, 8912, 4));
-    items.add(new StoreItem("Toy Doll", 7.58, 1264, 1));
-    items.add(new StoreItem("Bouncy Ball", 12.99, 1267, 8));
-    items.add(new StoreItem("Puzzle", 12.50, 2357, 10));
-    items.add(new StoreItem("Notebook", 3.27, 8125, 15));
-    items.add(new StoreItem("Pencil", .99, 6328, 3));
-    items.add(new StoreItem("Stencil", 1.74, 7895, 4));
-    items.add(new StoreItem("Costume", 11.59, 2348, 1));
-    items.add(new StoreItem("Apple", 2.10, 1785, 13));
+    items.add(new StoreItem17("Toy Gun", 12.50, 2352, 6));
+    items.add(new StoreItem17("Toy Car", 5.99, 8912, 4));
+    items.add(new StoreItem17("Toy Doll", 7.58, 1264, 1));
+    items.add(new StoreItem17("Bouncy Ball", 12.99, 1267, 8));
+    items.add(new StoreItem17("Puzzle", 12.50, 2357, 10));
+    items.add(new StoreItem17("Notebook", 3.27, 8125, 15));
+    items.add(new StoreItem17("Pencil", .99, 6328, 3));
+    items.add(new StoreItem17("Stencil", 1.74, 7895, 4));
+    items.add(new StoreItem17("Costume", 11.59, 2348, 1));
+    items.add(new StoreItem17("Apple", 2.10, 1785, 13));
 
     printAllData();
 
     // USE THESE TO TEST
+    System.out.println("<< Sorted items by ID using the Merge Sorting algorithm >>");
     sortById(0, items.size() - 1);
     // sortByPrice();
     // sortByName();
@@ -78,7 +79,7 @@ public class StoreTest {
   }
 
   public static void merge(int low, int mid, int high) {
-    StoreItem[] temp = new StoreItem[high - low + 1];
+    StoreItem17[] temp = new StoreItem17[high - low + 1];
 
     int i = low, j = mid + 1, n = 0;
 
@@ -108,7 +109,7 @@ public class StoreTest {
     int i;
     int k;
     int posMax;
-    StoreItem temp;
+    StoreItem17 temp;
 
     for (i = items.size() - 1; i >= 0; i--) {
       // find largest element in the i elements
@@ -126,7 +127,7 @@ public class StoreTest {
 
   public static void sortByName() {
     System.out.println("<< Items sorted by name using the Insertion Sorting algorithm >>");
-    StoreItem temp;
+    StoreItem17 temp;
     for (int i = 0; i < items.size(); i++) {
       for (int j = i + 1; j < items.size(); j++) {
         if (items.get(i).getName().compareToIgnoreCase(items.get(j).getName()) > 0) {

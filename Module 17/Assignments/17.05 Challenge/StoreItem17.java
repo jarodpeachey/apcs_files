@@ -9,13 +9,13 @@
 import java.util.ArrayList;
 import java.text.DecimalFormat;
 
-public class StoreItem {
+public class StoreItem17 {
   private String name;
   private double price;
   private int id;
   private int quantity;
 
-  public StoreItem(String name, double price, int id, int quantity) {
+  public StoreItem17(String name, double price, int id, int quantity) {
     this.name = name;
     this.price = price;
     this.id = id;
