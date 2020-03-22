@@ -1,9 +1,9 @@
 
 /**
- * This class demonstrates the sequential search with an array of objects.
+ * This class browses through an album of songs and allows you to search by year, title and artist
  *
- * @author John Henry Thompson
- * @version 06/18/17
+ * @author Jarod Peachey
+ * @version 1.0.0
  */
 
 import java.util.ArrayList;
@@ -99,22 +99,6 @@ public class SongTester {
       for (int j = 0; j < found.size(); j++) {
         System.out.println(found.get(j));
       }
-    }
-  }
-
-  public static void findLocation(String toFind) {
-    int found = 0;
-
-    System.out.println("Find results: ");
-    for (int i = 0; i < album.size(); i++) {
-      if (album.get(i).getTitle().compareTo(toFind) == 0) {
-        System.out.println(album.get(i));
-        found++;
-      }
-    }
-
-    if (found == 0) { // we have not found the location
-      System.out.println(toFind + " is not in the album");
     }
   }
 }
